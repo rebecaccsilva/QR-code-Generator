@@ -6,7 +6,7 @@ Instalação das dependencias:
     pip install streamlit qrcode[pill]
 
 Como rodar:
-    streamlit run app.py
+    streamlit run qrcode_app.py
 """
 
 import io
@@ -35,10 +35,10 @@ NIVEIS_CORRECAO = {
 
 def gerar_qrcode(
     conteudo: str,
-    cor_frente: str= "black",
-    cor_fundo: str= "white",
-    tamanho_caixa: int=10,
-    borda: int=4,
+    cor_frente: str = "black",
+    cor_fundo: str = "white",
+    tamanho_caixa: int = 10,
+    borda: int = 4,
     nivel_correcao=ERROR_CORRECT_M,
 ) -> "qrcode.image.pill.PilImage":
     """
@@ -75,7 +75,7 @@ def main():
 
     st.title("🔳 Gerador de QR Code")
     st.caption(
-        "Gere QR Codes personalizados a partir de texto, çonks ou qualquer conteúdo."
+        "Gere QR Codes personalizados a partir de texto, links ou qualquer conteúdo."
     )
 
     with st.sidebar:
@@ -128,5 +128,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
