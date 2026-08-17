@@ -1,12 +1,12 @@
 @echo off 
 title Gerador de QR Code
-cd /d "%-dp0"
+cd /d "%~dp0"
 
 echo Verificando dependencias...
 pip show streamlit >nul 2>&1
 if errorlevel 1 (
     echo Instalando dependencias, aguarde...
-    pip install streamlit qrcode[pill]
+    pip install streamlit qrcode[pil]
 )
 
 echo.
